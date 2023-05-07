@@ -3,7 +3,9 @@ package de.schiffe_versenken;
 
 import javafx.scene.Parent;
 
-public class Schiff extends Parent{
+
+// Schiff DTO!
+public class Schiff extends Parent {
     public int type;
     public boolean vertical;
 

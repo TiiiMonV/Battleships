@@ -7,7 +7,6 @@ import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -38,7 +37,7 @@ public class BattleShipHauptklasse extends Application {
         root.setPrefSize(900, 700);
 
         //Textfelder beschriften!
-        Text gegnerText = new Text("Gegnerisches Spielbrett");
+        Text gegnerText = new Text("Gegner Spielbrett");
         Text spielerText = new Text("Spieler Spielbrett");
 
 

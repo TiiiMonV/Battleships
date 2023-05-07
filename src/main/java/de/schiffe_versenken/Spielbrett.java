@@ -47,8 +47,7 @@ public class Spielbrett extends Parent {
                         zelle.setStroke(Color.GREEN);
                     }
                 }
-            }
-            else {
+            } else {
                 for (int i = x; i < x + length; i++) {
                     Zelle zelle = getZelle(i, y);
                     zelle.schiff = schiff;
@@ -66,14 +65,13 @@ public class Spielbrett extends Parent {
     }
 
     public Zelle getZelle(int x, int y) {
-        return (Zelle)((HBox)rows.getChildren().get(y)).getChildren().get(x);
+        return (Zelle) ((HBox) rows.getChildren().get(y)).getChildren().get(x);
     }
-
 
 
     //Nimmt den aktuellen Wert der X bzw. Y Achse und rechnet -1 bzw. +1 und speichert das in einem Array!
     private Zelle[] getNeighbors(int x, int y) {
-        Point2D[] points = new Point2D[] {
+        Point2D[] points = new Point2D[]{
                 new Point2D(x - 1, y),
                 new Point2D(x + 1, y),
                 new Point2D(x, y - 1),
@@ -84,13 +82,12 @@ public class Spielbrett extends Parent {
 
         for (Point2D p : points) {
             if (istValiderPunkt(p)) {
-                neighbors.add(getZelle((int)p.getX(), (int)p.getY()));
+                neighbors.add(getZelle((int) p.getX(), (int) p.getY()));
             }
         }
 
         return neighbors.toArray(new Zelle[0]);
     }
-
 
 
     //Prüft, ob der Mausklick valide ist, sprich auf dem Spielfeld!
@@ -126,8 +123,7 @@ public class Spielbrett extends Parent {
                     }
                 }
             }
-        }
-        else {
+        } else {
             for (int i = x; i < x + length; i++) {
                 if (!istValiderPunkt(i, y))
                     return false;
@@ -175,7 +171,7 @@ public class Spielbrett extends Parent {
             setStroke(Color.BLACK);
         }
 
-        public boolean shoot(){
+        public boolean shoot() {
             wasShot = true;
             setFill(Color.BLACK);
 
